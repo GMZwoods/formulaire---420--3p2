@@ -1,12 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>formulaire_420_3p2</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html class="no-js" lang="">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<div class="container">
+    <form action="mailto:someone@example.com" onsubmit="Validation()" method="post">
+        <p>Formulaire de paiement</p>
+        <p>Information de contact</p>
+        <div class="contact">
+            Nom :
+            <input id="NomUtilisateur" type="text" required placeholder="Votre nom" pattern="[A-Z][a-z]+">
+            <label for="NomUtilisateur"></label><br>
+            Courriel :
+            <input type="text" id="Courriel" required placeholder="VotreEmail@exemple.com" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" >
+            <!--source https://regexr.com/3e48o -->
+            <label for="Courriel"></label><br>
+            Province :
+            <select name="Province" id="ProvinceId" required>
+                <option></option>
+                <option>Québec</option>
+                <option>Ontario</option>
+                <option>Colombie-Britanique</option>
+                <option>Alberta</option>
+                <option>Manitoba</option>
+                <option>Yukon</option>
+                <option>Nunavut</option>
+                <option>Terres-Neuves & Labrador</option>
+            </select>
+            <label for="ProvinceId"></label>
+        </div>
+
+        <!--**********************************************************************************-->
+        <p>Informations de paiement</p>
+
+        <div class="Paiement">
+            Type de paiement :
+            <input type="radio" id="Visa" name="MéthodeDePaiement">
+            Visa <br>
+            <label for="Visa"></label>
+            <input type="radio" id="Mastercard" name="MéthodeDePaiement">
+            Mastercard <br>
+            <label for="Mastercard"></label>
+            <input type="radio" id="Amex" name="MéthodeDePaiement">
+            American Express <br>
+            <label for="Amex"></label>
+        </div>
+        <div id="cartedecredit">
+            Numéro de carte : <br>
+            <input type="text" required placeholder="xxxx-xxxx-xxxx-xxxx" id="NumCarteCredit">
+            <label for="NumCarteCredit"></label>
+        </div>
+        <div class="Livraison">
+            <p>Informations de livraison</p>
+            <div class="InfosLiv">
+                <input type="checkbox" id="Signature" name="Signature" required>
+                Signature requise <br>
+                <label for="Signature"></label>
+                <input type="checkbox" id="MmAdresse" name="Signature" required>
+                Livrer à la même adresse que l'adresse de paiement
+                <label for="MmAdresse"></label>
+            </div>
+        </div>
+        <button type="submit">Envoyer</button>
+        <button type="reset">Annuler</button>
+
+    </form>
+</div>
+<!--**********************************************************************************-->
+
+<script src="js/app.js"></script>
 </body>
+
 </html>
