@@ -16,26 +16,51 @@ html {
     font-size: 1em;
     line-height: 1.4;
     width: 100%;
+
 }
+body{
+    margin: 0 auto ;
+    margin-top: 10rem;
+    width: 50%;
+    height: 100%;
+    font-size: large;
+}
+
 div.container
 {
     margin: 0 auto;
-    border: solid;
-    border-right-width: 0.5px;
+    border: solid black;
     border-radius: 0.8rem;
     display: flex;
     justify-content: center;
+    padding: 1.5rem ;
+
 }
+div.contact
+{   margin: 0 auto;
+    border: solid;
+    border-width: 0.5px;
+    padding-right: 2rem;
+}
+
+
+
 div.Paiement
 {
     margin: 0 auto;
-
+    border: solid;
+    border-width: 0.5px;
+    display: flex;
+    flex-direction: column;
+}
+.col
+{
     display: flex;
     flex-direction: row;
 }
 #cartedecredit
 {
-    display: flex;
+display: flex;
     flex-direction: row;
 }
 #NumCarteCredit
@@ -45,7 +70,18 @@ div.Paiement
 }
 div.Livraison
 {
-
+    border: solid;
+    border-width: 0.5px;
+}
+div.button{
+    padding-top: 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+button
+{
+    margin-left: 1rem;
 }
 
 ::-moz-selection {
